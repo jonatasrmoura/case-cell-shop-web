@@ -7,7 +7,7 @@ interface ProductCardProps {
   product: Product;
   isBuying: boolean;
   onBuy: (productId: string) => void;
-  index: number; // Para animar em cascata (stagger)
+  index: number;
 }
 
 export function ProductCard({
@@ -48,7 +48,6 @@ export function ProductCard({
         </div>
       </div>
 
-      {/* Botão: Este container ficará sempre na base devido ao flex-1 do div acima */}
       <div className="mt-auto">
         <button
           onClick={() => onBuy(product.id)}
